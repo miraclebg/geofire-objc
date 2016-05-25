@@ -6,12 +6,13 @@
 //  Copyright (c) 2014 Firebase. All rights reserved.
 //
 
-#import <GeoFire/GeoFire.h>
 #import <CoreLocation/CoreLocation.h>
+
+@import Firebase;
 
 @interface GeoFire (Private)
 
-- (Firebase *)firebaseRefForLocationKey:(NSString *)key;
+- (FIRDatabaseReference *)firebaseRefForLocationKey:(NSString *)key;
 
 + (CLLocation *)locationFromValue:(id)dict;
 + (NSDictionary *)dictFromLocation:(CLLocation *)location;
